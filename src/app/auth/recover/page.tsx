@@ -7,18 +7,20 @@ import { useRouter } from "next/navigation";
 const Recover = () => {
   const router = useRouter();
   return (
-    <div className="flex flex-col items-center max-w-[700px] mx-auto w-[498px] relative">
-      <FaArrowAltCircleLeft
-        style={{
-          fontSize: "24px",
-          position: "absolute",
-          left: "0px",
-          cursor: "pointer",
-          top: "5px",
-        }}
-        onClick={() => router.push("/auth/signin")}
-      />
-      <h2 className="text-2xl">Recupere a sua conta</h2>
+    <div className="flex flex-col items-center w-[500px] max-sm:w-full h-screen justify-center mx-auto ">
+      <div className="relative w-full text-center">
+        <FaArrowAltCircleLeft
+          style={{
+            fontSize: "24px",
+            position: "absolute",
+            left: "0px",
+            cursor: "pointer",
+            top: "5px",
+          }}
+          onClick={() => router.push("/auth/signin")}
+        />
+        <h2 className="text-2xl">Recupere a sua conta</h2>
+      </div>
       <input
         type="text"
         placeholder="Digite o seu email"
