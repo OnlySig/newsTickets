@@ -24,7 +24,8 @@ const FormUp = () => {
   const router = useRouter();
   const { handleFormRegister } = UseRegister();
   const handleForm = async (dados: IFormInput) => {
-    await handleFormRegister(dados);
+    const test = await handleFormRegister(dados);
+    if (test) return;
     router.push("/auth/signin");
   };
   const senha = watch("senha");

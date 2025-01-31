@@ -21,7 +21,8 @@ const UseRegister = () => {
         }),
       });
       if (status === 400) {
-        return error400();
+        error400();
+        return true;
       }
       if (!ok) {
         throw new Error("Erro ao cadastrar usuário");

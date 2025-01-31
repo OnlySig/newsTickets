@@ -2,7 +2,7 @@ import toast from "react-hot-toast";
 const successLogin = () => toast.success("Login feito com sucesso!");
 const loading = () => toast.loading("Carregando...");
 const errorMsg = () => toast.error("Erro ao efetuar login");
-const errorLogin = () => toast.error("Erro ao efetuar login");
+const errorLogin = () => toast.error("email ou senha inválidos");
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
 const useLogin = () => {
@@ -21,7 +21,7 @@ const useLogin = () => {
       });
       if (response.status === 400) {
         errorLogin();
-        return;
+        return true;
       }
       if (!response.ok) {
         throw new Error(

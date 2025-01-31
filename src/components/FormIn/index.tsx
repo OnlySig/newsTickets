@@ -26,7 +26,9 @@ const FormIn = () => {
   } = useForm<FormInputTypes>();
   const { handleFormLogin } = useLogin();
   const handleForm = async (dados: FormInputTypes) => {
-    await handleFormLogin(dados);
+    const test = await handleFormLogin(dados);
+    console.log(test);
+    if (test) return;
     router.push("/");
   };
   return (
